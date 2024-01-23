@@ -6,7 +6,7 @@ node="dale"
 pool="CrimeWave"
 
 # adds leading 0s to user number for vmid
-for id in $(seq -f "%03g" 2 i$(($users+1)))
+for id in $(seq -f "%03g" 2 $(($users+1)))
 do 
     for template in ${!templates[@]} 
     do
