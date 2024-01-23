@@ -16,6 +16,6 @@ do
         #echo "clone ${templates[$template]} with vmid 9$id$boxnumber on $node in $pool named $id-${templates[$template]}"
         pvesh create /nodes/$node/qemu/${templates[$template]}/clone -newid 9$id$boxnumber -pool $pool -name $id-${templates[$template]}
         #echo "config 9$id$boxnumber net0 to have vlan tag $((10#$id))"
-        pvesh create /nodes/$node/qemu/9$id$boxnumber/config -net0 "virtio,bridge=vmbr2,firewall=0,tag=$((10#$id))"
+        pvesh create /nodes/$node/qemu/9$id$boxnumber/config -net0 "virtio,bridge=vmbr1,firewall=0,tag=$((10#$id))"
     done
 done
